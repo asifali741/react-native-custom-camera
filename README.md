@@ -4,7 +4,7 @@ A custom React Native native module for opening the device camera.
 
 ## Installation
 
-Install the package in your React Native app:
+Install the package in a React Native app:
 
 ```sh
 npm install @asif-pindi/react-native-custom-camera
@@ -16,7 +16,7 @@ or:
 yarn add @asif-pindi/react-native-custom-camera
 ```
 
-After installing a native module, rebuild the native app:
+After installing or updating a native module, rebuild the native app:
 
 ```sh
 npx react-native run-android
@@ -24,7 +24,7 @@ npx react-native run-android
 
 ## Usage
 
-Call `openCamera` directly:
+Import and call `openCamera`:
 
 ```tsx
 import { openCamera } from '@asif-pindi/react-native-custom-camera';
@@ -32,7 +32,7 @@ import { openCamera } from '@asif-pindi/react-native-custom-camera';
 openCamera();
 ```
 
-Use it from a button:
+Button example:
 
 ```tsx
 import { Button, View } from 'react-native';
@@ -47,40 +47,55 @@ export default function App() {
 }
 ```
 
-## Run The Example App
+## Android Permission
 
-From this repository:
+The package declares the Android camera permission. Android will ask the user for camera permission the first time the camera opens.
 
-```sh
-cd "D:\Camera Plugin\react-native-custom-camera"
-node .yarn\releases\yarn-4.11.0.cjs install
-```
+If permission is denied, call `openCamera()` again after the user enables camera permission from app settings.
 
-Start Metro in one terminal:
+## Platform Support
 
-```sh
-cd "D:\Camera Plugin\react-native-custom-camera"
-node .yarn\releases\yarn-4.11.0.cjs workspace react-native-custom-camera-example start
-```
+- Android: supported.
+- iOS: native files are included, but camera opening behavior currently needs iOS implementation.
+- Web: not supported. `openCamera()` rejects with an unsupported-platform error.
 
-Run Android in another terminal:
+## Example App
+
+Clone the repository and install dependencies:
 
 ```sh
-cd "D:\Camera Plugin\react-native-custom-camera"
-node .yarn\releases\yarn-4.11.0.cjs workspace react-native-custom-camera-example android
+git clone https://github.com/asifali741/react-native-custom-camera.git
+cd react-native-custom-camera
+yarn install
 ```
 
-## Notes
+Start Metro:
 
-- Android will ask for camera permission the first time the camera opens.
-- If you update this package in an app, rebuild the native app again.
-- Web builds use an unsupported fallback and will reject `openCamera()`.
+```sh
+yarn example start
+```
 
-## Contributing
+Run the Android example:
 
-- [Development workflow](CONTRIBUTING.md#development-workflow)
-- [Sending a pull request](CONTRIBUTING.md#sending-a-pull-request)
-- [Code of conduct](CODE_OF_CONDUCT.md)
+```sh
+yarn example android
+```
+
+## Updating The Package
+
+When a new version is published, update it in your app:
+
+```sh
+npm install @asif-pindi/react-native-custom-camera@latest
+```
+
+or:
+
+```sh
+yarn add @asif-pindi/react-native-custom-camera@latest
+```
+
+Then rebuild the native app.
 
 ## License
 

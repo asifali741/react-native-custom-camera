@@ -1,6 +1,6 @@
 {
   "name": "@asif-pindi/react-native-custom-camera",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Camera",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
