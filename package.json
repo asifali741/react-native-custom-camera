@@ -1,5 +1,5 @@
 {
-  "name": "@asifali741/react-native-custom-camera",
+  "name": "@asif-pindi/react-native-custom-camera",
   "version": "1.0.2",
   "description": "Camera",
   "main": "./lib/module/index.js",

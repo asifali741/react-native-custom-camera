@@ -1,5 +1,5 @@
 import { Button, StyleSheet, View } from 'react-native';
-import { openCamera } from 'react-native-custom-camera';
+import { openCamera } from '@asif-pindi/react-native-custom-camera';
 
 export default function App() {
   return (

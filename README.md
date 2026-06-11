@@ -1,4 +1,4 @@
-# react-native-custom-camera
+# @asif-pindi/react-native-custom-camera
 
 A custom React Native native module for opening the device camera.
 
@@ -7,13 +7,13 @@ A custom React Native native module for opening the device camera.
 Install the package in your React Native app:
 
 ```sh
-npm install react-native-custom-camera
+npm install @asif-pindi/react-native-custom-camera
 ```
 
 or:
 
 ```sh
-yarn add react-native-custom-camera
+yarn add @asif-pindi/react-native-custom-camera
 ```
 
 After installing a native module, rebuild the native app:
@@ -27,7 +27,7 @@ npx react-native run-android
 Call `openCamera` directly:
 
 ```tsx
-import { openCamera } from 'react-native-custom-camera';
+import { openCamera } from '@asif-pindi/react-native-custom-camera';
 
 openCamera();
 ```
@@ -36,7 +36,7 @@ Use it from a button:
 
 ```tsx
 import { Button, View } from 'react-native';
-import { openCamera } from 'react-native-custom-camera';
+import { openCamera } from '@asif-pindi/react-native-custom-camera';
 
 export default function App() {
   return (
